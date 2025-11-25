@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Launchpad | Boost Your Future</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* light gray background */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-indigo-600">
+                <!-- SVG Icon (Rocket) -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a14.28 14.28 0 0 1 11 11 1 1 0 0 0 .7.3l1.8.8c.6.3 1.2.2 1.6-.2l2.3-2.3c.4-.4.5-1 1.2-1.6l.8-1.8a1 1 0 0 0 .3-.7c0-2.3 0-6.1 0-7.7a1 1 0 0 0-.3-.7L20.2 4.2c-.4-.4-1-.5-1.6-.2l-1.8.8a1 1 0 0 0-.7.3c-1.6 0-5.4 0-7.7 0a1 1 0 0 0-.7-.3l-.8-1.8c-.3-.6-.2-1.2.2-1.6l2.3-2.3c.4-.4 1-.5 1.6-1.2l.8-.8c-.3-.6-.2-1.2-.2-1.6a1 1 0 0 0-.3-.7c-1.6 0-5.4 0-7.7 0a1 1 0 0 0-.7-.3l-1.8.8c-.6.3-1.2.2-1.6-.2l-2.3-2.3c-.4-.4-.5-1-1.2-1.6l-.8-1.8a1 1 0 0 0-.3-.7c-1.6 0-5.4 0-7.7 0a1 1 0 0 0-.7-.3l-.8-1.8c-.3-.6-.2-1.2.2-1.6l-2.3-2.3c-.4-.4-1-.5-1.6-1.2l-.8-.8zM12 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                <span>Launchpad</span>
+            </a>
+
+            <!-- Right Side Container (for mobile CTA and Menu) -->
+            <div class="flex items-center space-x-4">
+                <!-- FIX: Mobile "Get Started" Button (Always visible on mobile/small screens) -->
+                <a href="#signup" class="lg:hidden px-3 py-1.5 text-sm text-white bg-indigo-600 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg smooth-scroll">Start Now</a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="#why-choose-us" class="text-gray-600 hover:text-indigo-600 transition duration-300 smooth-scroll">Why Us?</a>
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600 transition duration-300 smooth-scroll">Features</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition duration-300 smooth-scroll">Success Stories</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition duration-300 smooth-scroll">Pricing</a>
+                    <!-- Desktop "Get Started" button -->
+                    <a href="#signup" class="px-5 py-2 text-white bg-indigo-600 hover:bg-indigo-700 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg smooth-scroll">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-600 hover:text-indigo-600" id="mobile-menu-button">
+                    <!-- SVG Icon (Menu) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="lg:hidden hidden bg-gray-50 border-t border-gray-200" id="mobile-menu">
+            <a href="#why-choose-us" class="block py-3 px-6 text-gray-600 hover:bg-indigo-100 smooth-scroll">Why Us?</a>
+            <a href="#features" class="block py-3 px-6 text-gray-600 hover:bg-indigo-100 smooth-scroll">Features</a>
+            <a href="#testimonials" class="block py-3 px-6 text-gray-600 hover:bg-indigo-100 smooth-scroll">Success Stories</a>
+            <a href="#pricing" class="block py-3 px-6 text-gray-600 hover:bg-indigo-100 smooth-scroll">Pricing</a>
+            <!-- Removed redundant "Get Started" link as it's now in the main nav for mobile -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <!-- Text Content -->
+                <div class="mb-12 lg:mb-0">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+                        Unlock Your Full <span class="text-indigo-600">Career Potential</span>.
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-lg">
+                        Our platform provides personalized coaching, cutting-edge skill assessments, and resume optimization to land your dream job faster.
+                    </p>
+                    <a href="#signup" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105 smooth-scroll">
+                        Start Your Free Trial Today
+                        <!-- SVG Icon (Arrow Right) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Image/Illustration -->
+                <div class="flex justify-center lg:justify-end">
+                    <!-- Placeholder Image with professional career theme -->
+                    <img src="76d3d911f80933582a48d203fe2cb9d7.jpg";
+                         alt="Illustration of a person climbing a career ladder to success"
+                         class="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-none transform transition duration-500 hover:rotate-1"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/818CF8/ffffff?text=Professional+Growth';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section (New Section) -->
+    <section id="why-choose-us" class="py-16 md:py-24 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">
+                Why Launchpad Is Your Best Bet
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                We combine AI precision with human expertise to deliver career acceleration that simply works, backed by data.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reason 1: Data-Driven -->
+                <div class="text-center p-6 rounded-xl border border-gray-200 hover:shadow-md transition duration-300">
+                    <div class="text-indigo-600 flex justify-center mb-4">
+                        <!-- SVG Icon (Bar Chart) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Data-Driven Success
+                    </h3>
+                    <p class="text-gray-600">
+                        Our AI models analyze millions of successful career paths to provide proven, personalized advice, not generic tips.
+                    </p>
+                </div>
+
+                <!-- Reason 2: Expert Network -->
+                <div class="text-center p-6 rounded-xl border border-gray-200 hover:shadow-md transition duration-300">
+                    <div class="text-indigo-600 flex justify-center mb-4">
+                        <!-- SVG Icon (Briefcase) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Industry-Veteran Coaches
+                    </h3>
+                    <p class="text-gray-600">
+                        Access a network of seasoned professionals for 1:1 coaching and mock interviews that replicate real-world scenarios.
+                    </p>
+                </div>
+
+                <!-- Reason 3: Seamless Experience -->
+                <div class="text-center p-6 rounded-xl border border-gray-200 hover:shadow-md transition duration-300">
+                    <div class="text-indigo-600 flex justify-center mb-4">
+                        <!-- SVG Icon (Infinity) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 2C16.86 2 15 4.19 15 7s1.86 5 4.5 5c2.65 0 4.5-2.19 4.5-5s-1.85-5-4.5-5zM4.5 12c-2.64 0-4.5 2.19-4.5 5s1.86 5 4.5 5c2.64 0 4.5-2.19 4.5-5s-1.86-5-4.5-5zM12 9h12M12 15H0"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        All-in-One Platform
+                    </h3>
+                    <p class="text-gray-600">
+                        From skill gap analysis to final offer negotiation, everything you need is consolidated into one intuitive dashboard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">
+                The Edge You Need
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16">
+                Three powerful tools designed to elevate your job search.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                        <!-- SVG Icon (Target) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Personalized Roadmaps
+                    </h3>
+                    <p class="text-gray-600">
+                        Stop guessing your next move. Our AI analyzes your skills and goals to generate a clear, step-by-step path to your target career.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                        <!-- SVG Icon (Resume/File Text) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        AI Resume Optimization
+                    </h3>
+                    <p class="text-gray-600">
+                        Instantly score your resume against industry standards and job descriptions, ensuring you pass the initial ATS screening every time.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                        <!-- SVG Icon (Users/Team) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Expert Interview Coaching
+                    </h3>
+                    <p class="text-gray-600">
+                        Practice behavioral and technical questions with mock interviews led by industry professionals to build confidence and reduce anxiety.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Section (CTA) -->
+    <section id="signup" class="py-16 md:py-24 bg-indigo-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Ready to Take the Next Step?
+                </h2>
+                <p class="text-xl text-indigo-200">
+                    Sign up for a free 7-day trial and start building your future today.
+                </p>
+            </div>
+
+            <!-- Sign Up Form Card -->
+            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                               placeholder="Jane Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                               placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="career-goal" class="block text-sm font-medium text-gray-700">Primary Career Goal (Optional)</label>
+                        <select id="career-goal" name="career-goal"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select your goal...</option>
+                            <option value="first_job">Land my first job</option>
+                            <option value="promotion">Get a promotion</option>
+                            <option value="career_change">Make a career change</option>
+                            <option value="skill_up">Skill up for better opportunities</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="terms" name="terms" type="checkbox" required
+                               class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <label for="terms" class="ml-2 block text-sm text-gray-900">
+                            I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-500 font-medium">Terms of Service</a>.
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-md text-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 transform hover:scale-[1.01]">
+                            Sign Up and Start Free Trial
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8 mb-8">
+                <!-- Column 1: Logo & Mission -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-bold text-indigo-400 mb-3">Launchpad</h3>
+                    <p class="text-gray-400 text-sm">
+                        Dedicated to accelerating your professional journey with precision-guided tools.
+                    </p>
+                </div>
+
+                <!-- Column 2: Product Links -->
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#why-choose-us" class="text-gray-400 hover:text-white transition duration-200 smooth-scroll">Why Choose Us?</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-200 smooth-scroll">Roadmap Generator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Resume Checker</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Interview Prep</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company Links -->
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal -->
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Social -->
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-md font-semibold mb-3">Connect</h4>
+                    <div class="flex space-x-4">
+                        <!-- Placeholder Social Icons (Twitter) -->
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M16.59 7.55c.34.25.68.45 1.05.6.37.15.75.25 1.15.3.4.05.8-.05 1.2-.2.3-.1.6-.25.9-.4l-.7-.4c-.3.1-.6.2-.9.2-.3 0-.6-.1-.9-.2-.3-.1-.5-.3-.7-.5-.2-.2-.4-.4-.5-.7-.1-.3-.1-.6-.1-.9v-1.1c.3.1.6.2.9.2.3 0 .6 0 .9-.1.3-.1.6-.2.8-.4s.5-.5.6-.8c.1-.3.2-.6.2-.9s-.1-.6-.2-.9c-.1-.3-.3-.6-.5-.8s-.5-.4-.8-.5c-.3-.1-.7-.2-1-.2-.4 0-.8.1-1.2.3-.4.2-.8.5-1.1.8-.3.3-.6.6-.8.9-.2.3-.3.7-.4 1.1-.1.4-.1.8 0 1.2.1.4.2.8.5 1.1zM12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 1.5c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5-3.8-8.5-8.5-8.5z"/></svg>
+                        </a>
+                        <!-- Placeholder Social Icons (LinkedIn) -->
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8 17h3v-6H8v6zM9.5 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM16 17h3v-6h-3v6zM17.5 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-sm text-gray-400">
+                &copy; 2024 Career Launchpad. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Smooth Scrolling -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Mobile Menu Toggle Logic
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click for better UX
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+
+        // Smooth Scrolling Logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            // Check if the link is a custom smooth-scroll link, or just a '#'
+            if (anchor.getAttribute('href') !== '#') {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Use the modern scrollIntoView with smooth behavior
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Optionally update URL hash after scrolling is complete
+                        setTimeout(() => {
+                             window.location.hash = targetId;
+                        }, 600); // Adjust timeout to match scroll duration
+                    }
+                });
+            }
+        });
+
+    </script>
+
+</body>
+</html>
